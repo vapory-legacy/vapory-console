@@ -137,8 +137,8 @@ module.exports = {
                 new web3._extend.Method({
                     name: 'storageRangeAt',
                     call: 'debug_storageRangeAt',
-                    inputFormatter: [null, null, null, null, null, null],
-                    params: 6
+                    inputFormatter: [null, null, null, null, null],
+                    params: 5
                 })
             ],
             properties:
