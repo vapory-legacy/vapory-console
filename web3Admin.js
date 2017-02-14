@@ -120,13 +120,25 @@ module.exports = {
                     params: 1,
                     inputFormatter: [web3._extend.formatters.formatInputInt],
                     outputFormatter: web3._extend.formatters.formatOutputString
-                })      ,
+                }),
                 new web3._extend.Method({
                     name: 'dumpBlock',
                     call: 'debug_dumpBlock',
                     params: 1,
                     inputFormatter: [web3._extend.formatters.formatInputInt],
                     outputFormatter: function(obj) { return obj; }
+                }),
+                new web3._extend.Method({
+        	    name: 'traceTransaction',
+                    call: 'debug_traceTransaction',
+                    inputFormatter: [null, null],
+                    params: 2
+                }),
+                new web3._extend.Method({
+                    name: 'storageRangeAt',
+                    call: 'debug_storageRangeAt',
+                    inputFormatter: [null, null, null, null, null],
+                    params: 5
                 })
             ],
             properties:
