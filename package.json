@@ -24,7 +24,7 @@
     "url": "https://github.com/vaporyco/vapory-console/issues"
   },
   "dependencies": {
-    "web3": "~0.15.3",
+    "web3": "git://github.com/vaporyco/web3.js.git#3e23dbd3fee74c3e855d806e4c5331ea618471c4",
     "es6-shim": "^0.35.1"
   }
 }
