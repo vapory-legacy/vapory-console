@@ -1,10 +1,10 @@
 // This file serves both as a simple example and as documentation
-// of the RPC testing endpoints in cpp-ethereum.
-// Note that this does not (yet) work with geth!
-// Install cpp-ethereum from the ubuntu dev ppa, start it in test-mode:
-// $ eth --test -d /tmp/test &
+// of the RPC testing endpoints in cpp-vapory.
+// Note that this does not (yet) work with gvap!
+// Install cpp-vapory from the ubuntu dev ppa, start it in test-mode:
+// $ vap --test -d /tmp/test &
 // Wait for it to start up and then run this file:
-// ethconsole example.js /tmp/test/geth.ipc
+// vapconsole example.js /tmp/test/gvap.ipc
 
 // The testing RPC interfaces are:
 // test_setChainParams({}) -> bool: set chain parameters using the json chain description
@@ -30,14 +30,14 @@ web3.personal.newAccount('', function(err, mainAccount) {
     logError(err);
     console.log("Created new genesis block.");
     var secondAccount = '0x1234567890123456789012345678901234567890';
-    web3.eth.sendTransaction({from: mainAccount, to: secondAccount, value: 200}, function(err, result) {
+    web3.vap.sendTransaction({from: mainAccount, to: secondAccount, value: 200}, function(err, result) {
       logError(err);
       console.log("Transaction sent, mining 50 blocks...");
       web3.test.mineBlocks(50, function(err) {
         logError(err);
         console.log("Waiting for blocks to be mined...");
         var loop = function() {
-          web3.eth.getBlockNumber(function(err, blockNr) {
+          web3.vap.getBlockNumber(function(err, blockNr) {
             logError(err);
             console.log("Current block number: " + blockNr);
             if (blockNr < 50) {

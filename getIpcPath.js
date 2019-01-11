@@ -10,8 +10,8 @@ module.exports = function() {
     var p = require('path');
     var path = process.env.HOME;
 
-    var macDefaultDir = "/Library/Ethereum/geth.ipc";
-    var linuxDefaultDir = "/.ethereum/geth.ipc";
+    var macDefaultDir = "/Library/Vapory/gvap.ipc";
+    var linuxDefaultDir = "/.vapory/gvap.ipc";
 
     if(process.platform === 'darwin') {
         if(fs.existsSync(path + macDefaultDir))
@@ -29,7 +29,7 @@ module.exports = function() {
         path += linuxDefaultDir;
 
     if(process.platform === 'win32')
-        path = '\\\\.\\pipe\\geth.ipc';
+        path = '\\\\.\\pipe\\gvap.ipc';
     
     return path;
 };

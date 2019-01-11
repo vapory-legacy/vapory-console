@@ -1,27 +1,27 @@
 {
-  "name": "ethereum-console",
+  "name": "vapory-console",
   "version": "0.0.4",
-  "description": "Commandline console for Ethereum nodes",
+  "description": "Commandline console for Vapory nodes",
   "main": "main.js",
   "bin": {
-    "ethconsole": "./main.js"
+    "vapconsole": "./main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ethereum/ethereum-console.git"
+    "url": "git://github.com/vaporyco/vapory-console.git"
   },
   "keywords": [
     "console",
-    "ethereum",
+    "vapory",
     "web3"
   ],
-  "author": "Christian Reitwiessner <c@ethdev.com>",
+  "author": "Vapory Authors <authors@vapory.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethereum/ethereum-console/issues"
+    "url": "https://github.com/vaporyco/vapory-console/issues"
   },
   "dependencies": {
     "web3": "~0.15.3",

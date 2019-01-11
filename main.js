@@ -40,10 +40,10 @@ global.web3 = web3;
 global.utils = require('./utils.js');
 global.proces = require('process');
 
-web3.eth.getBlockNumber(function(err, number)
+web3.vap.getBlockNumber(function(err, number)
 {
 	if (err)
-		console.error("Could not connect to node. Please start an Ethereum node first.");
+		console.error("Could not connect to node. Please start an Vapory node first.");
 	else
 	{
 		console.log("Connection successful.");
@@ -108,8 +108,8 @@ function executeScript()
 
 function logHelp()
 {
-	var help = "Usage: ethconsole [javascript file] [ipc socket]\n" +
-			"Connects to an ethereum node via ipc in order to control it remotely\n" +
+	var help = "Usage: vapconsole [javascript file] [ipc socket]\n" +
+			"Connects to an vapory node via ipc in order to control it remotely\n" +
 			"through global variable web3 (web3.admin is also present).\n" +
 			"If no arguments are given, connects to the ipc socket at " + ipcpath() + "\n" +
 			"and drops into interactive mode.\n" +
